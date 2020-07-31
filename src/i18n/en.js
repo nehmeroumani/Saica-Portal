@@ -4,7 +4,7 @@ export default {
     ...englishMessages, 
     resources: {
         general:{
-            appname:'Saica',
+            appname:'Semi-Automated Interface for Content Annotation',
             configuration:'Language',
             language:'Language',
             active:'Active',
@@ -15,6 +15,9 @@ export default {
             done:'Done', 
             name:'name',
             task: 'Task'
+        },
+        agreement:{
+name:'Agreement'
         },
         annotations:{
             taskNumber:' Task Number ',

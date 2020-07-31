@@ -7,7 +7,7 @@ export default {
     ...arMessages,   
     resources: {
         general:{
-            appname:'الصاعقة',
+            appname:'Semi-Automated Interface for Content Annotation',
             configuration:'اللغة',
             language:'اللغة',
             active:'فعّال؟',
@@ -18,6 +18,9 @@ export default {
             done:'إنهاء', name:'الإسم',
             task: 'المهمة'
         },
+        agreement:{
+            name:'الإتفاق'
+                    },
         annotations:{
             taskNumber:' مهمة رقم ',
             text:'التويت',

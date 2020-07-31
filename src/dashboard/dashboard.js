@@ -14,6 +14,7 @@ import twitter from '../twitter';
 import UserIcon from '@material-ui/icons/People';
 import SmsIcon from '@material-ui/icons/Sms';
 import ExtensionIcon from '@material-ui/icons/Extension';
+import LinkIcon from '@material-ui/icons/Link';
 import QuestionAnswer from '@material-ui/icons/QuestionAnswer';
 import { Link } from 'react-router-dom';
 import analytics from "../helpers/analytics";
@@ -155,7 +156,26 @@ const Categories = ({ value, translate }) => (
 
     </div>
 );
+const Agreement = ({ value, translate }) => (
+    <div style={styles.main}>
+                <Link  
+                 to={{
+                    pathname: '/agreement'                    
+                }}                
+               
+                className='sp-link'> 
 
+            <CardIcon Icon={LinkIcon} bgColor="#dd4c3f" />
+            <Card style={styles.card}>
+                <Typography style={styles.title} color="textSecondary">
+                    {translate('resources.agreement.name')}
+                </Typography>
+              
+            </Card>
+        </Link>
+
+    </div>
+);
 const Levels = ({ value, translate }) => (
     <div style={styles.main}>
                 <Link  
@@ -257,6 +277,7 @@ class Dashboard extends Component {
                     <div style={styles.flex}>
                         {<Tasks value={totalTasks} translate={this.props.translate} />}
                         {/* {<Annotations value={totalAnnotations} translate={this.props.translate} />} */}
+                        {<Agreement value={0} translate={this.props.translate} />}
                         {<Reports value={3} translate={this.props.translate} />}
                         {<Twitter value={totalTweets} translate={this.props.translate} />}                      
                         {<Users value={totalUsers} translate={this.props.translate} />}

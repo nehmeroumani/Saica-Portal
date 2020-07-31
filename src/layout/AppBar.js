@@ -37,7 +37,7 @@ const CustomAppBar = translate(({translate, classes, ...props }) => (
             className={classes.title}
             // id="react-admin-title"
             >
-                <a style={{color:'white',textDecoration:'none'}} href='#/'>
+                <a style={{color:'white',textDecoration:'none',fontSize: '16px'}} href='#/'>
                     {translate('resources.general.appname')}</a>
                 </Typography>
         

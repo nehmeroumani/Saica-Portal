@@ -12,6 +12,7 @@ import users from './users';
 import levelOfConfidence from './levelOfConfidence';
 import annotationtasks from './annotation/annotationTask';
 import annotations from './annotation/annotation';
+import agreement from './agreement';
 
 
 
@@ -91,8 +92,6 @@ class App extends Component {
                 customRoutes={customRoutes}
                 appLayout={newLayout}
             >
-
-
                 {permissions => [
                     // Only include the categories resource for admin users  
                     <Resource name="annotationTaskUserTweet"  {...annotations} />,   
@@ -108,14 +107,10 @@ class App extends Component {
                     permissions === 'admin'  ? <Resource name="annotation" /> : <Resource name="annotation" />,
                     permissions === 'admin'  ? <Resource name="word" /> : <Resource name="word" />,
                     permissions === 'admin'  ? <Resource name="users"  {...users} /> : <Resource name="users" />,
-                    permissions === 'admin'  ? <Resource name="levelOfConfidence"  /> : <Resource name="levelOfConfidence" />
-                    
+                    permissions === 'admin'  ? <Resource name="levelOfConfidence"  /> : <Resource name="levelOfConfidence" />,
+                    permissions === 'admin'  ? <Resource name="agreement"  {...agreement} /> : null                    
                 ]}
-
-
-
             </Admin>
-
         );
     }
 }
