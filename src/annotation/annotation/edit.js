@@ -393,7 +393,7 @@ class AnnotationForm extends Component {
     const { annotationTaskUserTweet } = this.state;
 
     fetchStart();
-    dataProvider(DELETE, 'annotationreason', { id: word.annotationReasonId })
+    dataProvider(DELETE, 'annotationreason', { id: word.annotationReasonId,userId:parseInt(annotationTaskUserTweet.userId) })
       .then(({ data }) => {
         this.setState({
           showDimensionKeyboard: false, showWordsKeyboard: false,
@@ -437,6 +437,7 @@ class AnnotationForm extends Component {
         annotation.annotationReasons = []
 
       const annotationreason = {
+        userId:parseInt(annotationTaskUserTweet.userId),
         annotationId: parseInt(annotation.id),
         categoryId: parseInt(selectedCategory.id),
         dimensionId: parseInt(selectedCategory.clickedDimensionId),
@@ -712,7 +713,7 @@ class AnnotationForm extends Component {
 
     //if (annotation) {
     fetchStart();
-    dataProvider(DELETE, 'annotation', { id: annotation.id })
+    dataProvider(DELETE, 'annotation', { id: annotation.id,userId:parseInt(this.state.annotationTaskUserTweet.userId) })
       .then(({ data }) => {
         let selectedWords = this.state.selectedWords.filter(x => x.categoryId != currentCategory.id && x.dimensionId == did);
         currentCategory.annotations = currentCategory.annotations.filter(x => x.id != annotation.id);
@@ -1034,6 +1035,12 @@ class AnnotationForm extends Component {
                       {this.state.words.map(c => (
                         this.renderChip(c, wordIndex++)
                       ))}
+                    </p>
+                    <p>
+                      {this.state.tweet && this.state.tweet.text}
+                    </p>
+                    <p>
+                      {this.state.tweet && this.state.tweet.tweetId}
                     </p>
                     {/* <div>
                       {this.state.selectedCategory.clickedDimensionId > 0 && this.state.selectedCategory.annotations.filter(x => x.dimensionId == this.state.selectedCategory.clickedDimensionId).map(a => (
