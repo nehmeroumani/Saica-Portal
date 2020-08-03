@@ -1039,9 +1039,9 @@ class AnnotationForm extends Component {
                     <p>
                       {this.state.tweet && this.state.tweet.text}
                     </p>
-                    <p>
+                    {/* <p>
                       {this.state.tweet && this.state.tweet.tweetId}
-                    </p>
+                    </p> */}
                     {/* <div>
                       {this.state.selectedCategory.clickedDimensionId > 0 && this.state.selectedCategory.annotations.filter(x => x.dimensionId == this.state.selectedCategory.clickedDimensionId).map(a => (
                         a.annotationReasons && a.annotationReasons.map(r => (
