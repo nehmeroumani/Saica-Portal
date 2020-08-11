@@ -12,6 +12,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
 import PersonIcon from '@material-ui/core/Avatar';
+import TweetText from './TweetText'
+
 import { ReferenceArrayField, SingleFieldList, ChipField, List, TextField, DateField, ReferenceField, ShowButton } from "react-admin";
 const cardStyle = {
     width: 300,
@@ -34,12 +36,6 @@ const IconTheme = ({ record, size }) => (
         <Chip className="arabic" label={record.name} />
     </Tooltip>
 );
-
-const TweetText = props => (
-    <Typography className="arabic" style={{ height: 60, textAlign: 'right',overflow:'hidden' }} > {props.record.text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')} ...</Typography>
-
-);
-
 
 const CommentGrid = ({ ids, data, basePath }) => (
     <div style={{ margin: '0.5em' }}>

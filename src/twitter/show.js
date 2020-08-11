@@ -10,6 +10,7 @@ import {
   TextField
 } from 'react-admin';
 import TweetEmbed from 'react-tweet-embed'
+import TweetText from './TweetText'
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
@@ -18,7 +19,7 @@ const TaskShow = props => {
     <Show {...props} >
       <TabbedShowLayout>
         <Tab label="Tweet">
-          <TextField source="text"  label=""/>
+          <TweetText source="text"  label=""/>
 
           <div style={{ margin: 20 }}>
             <ReferenceArrayField  label="Words" reference="word" source="wordIds"  basePath={props.basePath} >

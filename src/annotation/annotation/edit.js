@@ -37,6 +37,7 @@ import analytics from "../../helpers/analytics";
 import TouchApp from '@material-ui/icons/TouchApp';
 import CheckIcon from '@material-ui/icons/Check';
 import ClearIcon from '@material-ui/icons/Clear';
+import TweetText from '../../twitter/TweetText'
 
 import {
   fetchEnd,
@@ -1037,7 +1038,7 @@ class AnnotationForm extends Component {
                       ))}
                     </p>
                     <p>
-                      {this.state.tweet && this.state.tweet.text}
+                      {this.state.tweet && <TweetText source='text' record={this.state.tweet}></TweetText>}
                     </p>
                     {/* <p>
                       {this.state.tweet && this.state.tweet.tweetId}

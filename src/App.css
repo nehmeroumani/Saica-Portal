@@ -676,3 +676,17 @@ header > div > button{
 -ms-user-select: none; /* IE10+/Edge */
 user-select: none; /* Standard */
 }
+
+.arabic-tweet{
+  direction: rtl;
+  font-size: 14px !important;
+  text-align: right;
+  font-family: 'Almarai', sans-serifv !important
+}
+
+.twemoji{
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  margin: 0 2px;
+}

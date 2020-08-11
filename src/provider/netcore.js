@@ -35,7 +35,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => {
      */
     function stringify(s) {
         return s;
-    }
+    } 
     const convertFilters = (filters) => {
 
         let rest = [];

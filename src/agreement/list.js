@@ -231,8 +231,8 @@ class AgreementList extends Component {
                                         {row.tweetId}
                                     </TableCell>
                                     <TableCell numeric>{row.categoryAgreement}</TableCell>
-                                    <TableCell numeric>{row.dimensionAgreement}</TableCell>
-                                    <TableCell numeric>{row.reasonAgreement}</TableCell>
+                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.dimensionAgreement }</TableCell>
+                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.reasonAgreement }</TableCell>
                                 </TableRow>
                             );
                         })}

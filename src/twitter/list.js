@@ -1,4 +1,5 @@
 import React from 'react';
+import TweetText from './TweetText';
 
 import { NumberInput,Create, SimpleForm, List, Datagrid, TextField, Filter, TextInput, BooleanField, ReferenceInput, SelectInput,ReferenceField } from 'react-admin';
 const UserFilter = props => (
@@ -14,7 +15,7 @@ const UserList = ({ translate, ...props }) => (
         <TextField source="id" label='#' />  
         <TextField source="assignedInTasks" label='Assigned To' />  
         {/* <TextField source="accountDisplayName" label='user' /> */}
-        <TextField source="text" label='text' />                   
+        <TweetText source="text" label='text' />                   
         </Datagrid>
     </List>
 );

@@ -9,6 +9,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Avatar from '@material-ui/core/Avatar';
 import PersonIcon from '@material-ui/core/Avatar';
+import Twemoji from 'react-twemoji';
+
 import { ReferenceArrayField, SingleFieldList, ChipField, List, TextField, DateField, ReferenceField, ShowButton } from "react-admin";
 const cardStyle = {
     width: 300,
@@ -26,11 +28,11 @@ const AvatarField = ({ record, size }) => (
         style={{ width: size, height: size, marginRight: '8px' }}
     />
 );
+
 const TweetText = props => (
-    <Typography className="arabic" style={{height:60,textAlign: 'right'}} > {props.record.text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')}</Typography>
+    <Typography className="arabic" style={{height:60,textAlign: 'right'}} > <Twemoji options={{ className: 'twemoji' }}>{props.record.text.replace(/(?:https?|ftp):\/\/[\n\S]+/g, '')}</Twemoji> </Typography>
 
 );
-
 
 const CommentGrid = ({ ids, data, basePath }) => (
     <div style={{ margin: '0.5em' }}>

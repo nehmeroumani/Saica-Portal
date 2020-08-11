@@ -55,7 +55,6 @@ const UserList = ({ translate, ...props }) => (
             <TextField source="endTweetId" label="resources.annotationTask.endTweetId" />
             <TextField source="totalTweets" label="resources.annotationTask.totalTweets" />
             <TextField source="doneTweets"  label="resources.annotationTask.doneTweets" />   
-            <TextField source="totalAnnotations" label="resources.annotations.totalAnnotations" />            
        
             <Status label="Status" source="status" label="resources.annotationTask.status" options={{ width: 30 }} translate={translate} /> 
             <ShowButton />
