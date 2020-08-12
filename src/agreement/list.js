@@ -9,7 +9,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { withStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -19,6 +19,8 @@ import Paper from '@material-ui/core/Paper';
 import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
 import Input from '@material-ui/core/Input';
+import Tooltip from '@material-ui/core/Tooltip';
+import TweetText from '../twitter/TweetText';
 
 const styles = theme => ({
     formControl: {
@@ -228,7 +230,7 @@ class AgreementList extends Component {
                                         <Checkbox checked={isSelected} />
                                     </TableCell>
                                     <TableCell >
-                                        {row.tweetId}
+                                        <Tooltip title={<TweetText isTooltip={true} record={row} source="tweetText"></TweetText>}><Typography>{row.tweetId}</Typography></Tooltip>
                                     </TableCell>
                                     <TableCell numeric>{row.categoryAgreement}</TableCell>
                                     <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.dimensionAgreement }</TableCell>

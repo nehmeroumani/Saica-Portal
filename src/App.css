@@ -689,4 +689,8 @@ user-select: none; /* Standard */
   vertical-align: middle;
   width: 16px;
   margin: 0 2px;
+} 
+
+.tweet-tooltip{
+  color: white !important;
 }
