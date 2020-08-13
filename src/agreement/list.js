@@ -21,6 +21,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Input from '@material-ui/core/Input';
 import Tooltip from '@material-ui/core/Tooltip';
 import TweetText from '../twitter/TweetText';
+import TableSortLabel from '@material-ui/core/TableSortLabel';
 
 const styles = theme => ({
     formControl: {
@@ -35,7 +36,7 @@ const styles = theme => ({
 
 class AgreementList extends Component {
     state = {
-        users: [], agreement: [], selected: [], open: false
+        users: [], agreement: [], selected: [], open: false, sort: { field: 'category_agreement', order: 'asc' }
     };
     componentDidMount() {
         this.fetchUsers();
@@ -102,10 +103,19 @@ class AgreementList extends Component {
         const { data: agreement } = await dataProvider(GET_LIST, 'agreement',
             {
                 filter: { userid1: this.state.selectuser1, userid2: this.state.selectuser2 },
-                sort: { field: 'tweetid', order: 'ASC' },
+                sort: this.state.sort,
                 pagination: { page: 1, perPage: 100 }
             });
         this.setState({ agreement });
+    }
+
+    handleSortBy = (sort) => {
+        this.setState({ sort });
+        this.fetchAgreement();
+    }
+
+    reverseOrder = (order) => {
+        return order == 'asc' ? 'desc' : 'asc';
     }
 
     isSelected = id => this.state.selected.indexOf(id) !== -1;
@@ -186,6 +196,7 @@ class AgreementList extends Component {
         const { classes } = this.props;
 
         let rowCount = this.state.agreement.length;
+        let { sort } = this.state;
         let numSelected = this.state.selected.length;
         if (this.state.agreement && this.state.agreement.length > 0)
             return <Paper style={{ marginTop: '20px' }}>
@@ -194,7 +205,7 @@ class AgreementList extends Component {
                     disabled={this.state.selected.length == 0 ? 'disabled' : null}
                     style={{ 'marginTop': '30px', 'marginRight': '20px', 'marginLeft': '20px' }}>
                     Assign
-                            </Button>
+                </Button>
                 {this.renderAssign()}
                 <Table className={classes.table}>
                     <TableHead>
@@ -207,15 +218,35 @@ class AgreementList extends Component {
                                 />
                             </TableCell>
                             <TableCell>TweetId</TableCell>
-                            <TableCell numeric>Category Agrement</TableCell>
-                            <TableCell numeric>Dimension Agrement</TableCell>
-                            <TableCell numeric>Reason Agrement</TableCell>
+                            <TableCell numeric sortDirection={sort.field == 'category_agreement' ? sort.order : false} >
+                                <TableSortLabel
+                                    active={sort.field == 'category_agreement'}
+                                    direction={sort.order}
+                                    onClick={() => { this.handleSortBy({ field: 'category_agreement', order: this.reverseOrder(sort.order) }) }}>
+                                    Category Agrement
+                                </TableSortLabel>
+                            </TableCell>
+                            <TableCell numeric sortDirection={sort.field == 'dimension_agreement' ? sort.order : false} >
+                                <TableSortLabel
+                                    active={sort.field == 'dimension_agreement'}
+                                    direction={sort.order}
+                                    onClick={() => { this.handleSortBy({ field: 'dimension_agreement', order: this.reverseOrder(sort.order) }) }}>
+                                    Dimension Agrement
+                                </TableSortLabel>
+                            </TableCell>
+                            <TableCell numeric sortDirection={sort.field == 'reason_agreement' ? sort.order : false} >
+                                <TableSortLabel
+                                    active={sort.field == 'reason_agreement'}
+                                    direction={sort.order}
+                                    onClick={() => { this.handleSortBy({ field: 'reason_agreement', order: this.reverseOrder(sort.order) }) }}>
+                                    Reason Agrement
+                                </TableSortLabel>
+                            </TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {this.state.agreement.map(row => {
                             const isSelected = this.isSelected(row.id);
-
                             return (
                                 <TableRow
                                     key={row.id}
@@ -224,8 +255,7 @@ class AgreementList extends Component {
                                     role="checkbox"
                                     aria-checked={isSelected}
                                     tabIndex={-1}
-                                    selected={isSelected}
-                                >
+                                    selected={isSelected}>
                                     <TableCell padding="checkbox">
                                         <Checkbox checked={isSelected} />
                                     </TableCell>
@@ -233,8 +263,8 @@ class AgreementList extends Component {
                                         <Tooltip title={<TweetText isTooltip={true} record={row} source="tweetText"></TweetText>}><Typography>{row.tweetId}</Typography></Tooltip>
                                     </TableCell>
                                     <TableCell numeric>{row.categoryAgreement}</TableCell>
-                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.dimensionAgreement }</TableCell>
-                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.reasonAgreement }</TableCell>
+                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.dimensionAgreement}</TableCell>
+                                    <TableCell numeric>{row.categoryAgreement == 0 ? 'NA' : row.reasonAgreement}</TableCell>
                                 </TableRow>
                             );
                         })}
@@ -267,7 +297,7 @@ class AgreementList extends Component {
                                 <option value=''></option>
                                 {this.state.users.map(({ id, name }) => {
                                     return (
-                                        <option value={id}>{name}</option>
+                                        <option key={id} value={id}>{name}</option>
                                     );
                                 })}
                             </Select>
@@ -290,7 +320,7 @@ class AgreementList extends Component {
                                 <option value=''></option>
                                 {this.state.users.map(({ id, name }) => {
                                     return (
-                                        <option value={id}>{name}</option>
+                                        <option key={id} value={id}>{name}</option>
                                     );
                                 })}
                             </Select>

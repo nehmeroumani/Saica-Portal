@@ -28,16 +28,15 @@ else if (props.record.status == 30) {
 const TaskShow = props => (
   <Show {...props}>
     <TabbedShowLayout>
-      <Tab label="resources.annotationTask.nameItem">         
+      {/* <Tab label="resources.annotationTask.nameItem">         
       <ReferenceField source="userId" reference="users" linkType="show">
          <TextField source="name" />
        </ReferenceField>   
        <DateField source="creationDate" />
-      {/* <TextField source="name" /> */}
        <TextField source="startTweetId" />
        <TextField source="endTweetId" />
-      </Tab>  
-      <Tab label="resources.annotationTask.tweets" path="tasks">
+      </Tab>   */}
+      <Tab label="resources.annotationTask.tweets">
         <ReferenceManyField
           addLabel={false}
           reference="annotationTaskUserTweet"
