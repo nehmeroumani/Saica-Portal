@@ -82,7 +82,8 @@ export default {
             name:'الأفراد',
             username:'الإسم',
             role:'الوظيفة',
-            annotations:'المهمات'
+            annotations:'المهمات',
+            avgLevelOfConfidence:'معدل نسبة التأكد'
         },
         statistics:{
             tweetDone:' تويت منجزة',

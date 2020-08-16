@@ -80,7 +80,8 @@ name:'Agreement'
             name:'Users',
             username:'Name',
             role:'Role',
-            annotations:'Annotations'
+            annotations:'Annotations',
+            avgLevelOfConfidence:'Avg Per Confidence'
         },
         statistics:{
             tweetDone:'Tweet Done',
