@@ -620,7 +620,7 @@ class AnnotationForm extends Component {
       currentSelectedWords.push(word);
       this.saveReason(selectedCategory, currentSelectedWords)
     } else {
-      this.props.showNotification('Choose Category/Dimention First', 'error');
+      this.props.showNotification('Choose Category/Sub-category First', 'error');
     }
     //this.setState({ selectedCategory: selectedCategory });
   }
