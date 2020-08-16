@@ -14,6 +14,7 @@ import TweetText from './TweetText'
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
+
 const TaskShow = props => {
   return (
     <Show {...props} >
@@ -29,10 +30,9 @@ const TaskShow = props => {
             </ReferenceArrayField>
           </div>
 
-          <div  >
-            {/* <TweetEmbed id={ props.record.tweetId} placeholder={'loading'} /> */}
-
-          </div>
+          {/* <div  >
+            <TweetEmbed id={ props.record.tweetId} placeholder={'loading'} />
+          </div> */}
         </Tab>
 
       </TabbedShowLayout>

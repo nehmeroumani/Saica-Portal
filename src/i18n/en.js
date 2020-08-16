@@ -65,12 +65,12 @@ name:'Agreement'
         }
         ,
         dimension:{
-            nameAr:'Dimension ar',
-            nameEn:'Dimension en',
+            nameAr:'Sub-category ar',
+            nameEn:'Sub-category en',
             choose:'Choose ',
-            name:'Dimensions',
-            nameitem:'Dimension',
-            add:'Add dimension',
+            name:'Sub-categories',
+            nameitem:'Sub-category',
+            add:'Add sub-category',
             chooselevel:'Confidence'
         }
                 ,

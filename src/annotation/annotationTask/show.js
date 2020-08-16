@@ -47,7 +47,7 @@ const TaskShow = props => (
             <TextField source="tweetId" />
             <TextField source="taskDuration" label="resources.annotations.taskDuration" />
             <TextField source="confidenceName" label="resources.annotations.confidence" />
-            <TextField source="totalAnnotations" label="resources.annotations.totalAnnotations" />            
+            {/* <TextField source="totalAnnotations" label="resources.annotations.totalAnnotations" />             */}
             <Status label="Status" source="status" label="resources.annotations.status" options={{ width: 30 }}  translate={translate} />       
             <ShowButton />
           </Datagrid>
