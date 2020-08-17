@@ -3,7 +3,7 @@ import { CircularProgress } from '@material-ui/core';
 import { translate } from 'react-admin';
 import compose from 'recompose/compose';
 import httpClient from '../provider/httpClient';
-import { Config } from '../config'
+import { Config } from '../config';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
