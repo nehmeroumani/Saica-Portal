@@ -5,16 +5,18 @@
 .App-logo {
   height: 40vmin;
 }
+
 .mh-status {
-  border-radius:10px;
+  border-radius: 10px;
   padding: 6px 8px;
   font-weight: bold;
   font-size: 10px;
 }
 
-td{
+td {
   position: relative;
 }
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -31,7 +33,7 @@ td{
 }
 
 .mh-status {
-  border-radius:10px;
+  border-radius: 10px;
   padding: 6px 8px;
   font-weight: bold;
   font-size: 10px;
@@ -41,42 +43,49 @@ td{
 }
 
 .mh-status-annotation {
-  border-radius:10px;
+  border-radius: 10px;
   padding: 6px 8px;
   font-weight: bold;
   font-size: 10px;
 }
-.arabic{
-  font-family: 'Almarai', sans-serifv !important
 
+.arabic {
+  font-family: 'Almarai', sans-serifv !important
 }
+
 .arabic span {
   font-family: 'Almarai', sans-serifv !important;
 }
-.arabic p{
+
+.arabic p {
   font-family: 'Almarai', sans-serifv !important
-
 }
-.highcharts-container{
+
+.highcharts-container {
   width: 100% !important;
 }
 
-.highcharts-root{
+.highcharts-root {
   width: 100% !important;
 }
-.highchartscss{
-  min-width: 310px; height: 400px; margin: 0 auto;
+
+.highchartscss {
+  min-width: 310px;
+  height: 400px;
+  margin: 0 auto;
 }
+
 .mh-status-green {
   background-color: #c6f6d5;
   color: #2c784f;
 }
+
 .mh-status-yellow {
   background-color: #e6d967;
   color: #4b4514;
 }
 
-.MuiTab-root-185{
+.MuiTab-root-185 {
   text-transform: none !important;
 }
 
@@ -85,32 +94,38 @@ td{
   background-color: #c6f6d5;
   color: #2c784f;
 }
+
 .mh-status-yellow {
   background-color: #e6d967;
   color: #4b4514;
 }
+
 .mh-status-red {
-  background-color:  rgb(254, 215, 215);
+  background-color: rgb(254, 215, 215);
   color: rgb(245, 101, 101);
 }
+
 .mh-status-blue {
   background-color: #BEE3F8;
   color: #4299E1;
 }
+
 .mh-status-orange {
   background-color: #f5deb3 !important;
-  color: #d2691e!important;
-}
-.mh-status-gray {
-  background-color: #e5e5e5 !important;
-  color: #5a5959!important;
+  color: #d2691e !important;
 }
 
-.annotation-form{
+.mh-status-gray {
+  background-color: #e5e5e5 !important;
+  color: #5a5959 !important;
+}
+
+.annotation-form {
   display: flex;
   width: 100%;
   /* height: 100%; */
 }
+
 #drawer {
   /* background: #fff; */
   width: 200px;
@@ -121,7 +136,7 @@ td{
   flex-direction: column;
   /* background: #F8F9FA; */
 }
-  
+
 #drawer ol {
   margin: 0;
   counter-reset: li-count;
@@ -133,17 +148,28 @@ td{
   padding-top: 20px;
 }
 
-body:not(.en-lang) .annotation-form.google-codelab > div:not(#main){ margin-right: 10px; }
-body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10px; }
-.annotation-form.google-codelab .full-row{margin-left: 0 !important; margin-right: 0 !important;}
+body:not(.en-lang) .annotation-form.google-codelab>div:not(#main) {
+  margin-right: 10px;
+}
+
+body.en-lang .annotation-form.google-codelab>div:not(#main) {
+  margin-left: 10px;
+}
+
+.annotation-form.google-codelab .full-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
 #drawer ol li {
   display: block;
   counter-increment: li-count;
 }
- #drawer ol li[completed] a {
+
+#drawer ol li[completed] a {
   color: #212121;
 }
+
 #drawer ol li a {
   text-decoration: none;
   display: flex;
@@ -156,7 +182,7 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   line-height: 20px;
   box-sizing: content-box;
   position: relative;
-  font-family:Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   transition: all 300ms ease-in-out;
   border: 1px #dadce0 solid;
@@ -165,14 +191,16 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   background: white;
 }
 
-#drawer ol li:first-child  a{
+#drawer ol li:first-child a {
   margin-top: 0;
   padding-top: 0;
 }
- #drawer ol li a .step {
+
+#drawer ol li a .step {
   display: flex;
   align-items: center;
 }
+
 /* #drawer ol li[completed] .step:before {
   background-color: #1A73E8;
   color: #fff;
@@ -196,20 +224,22 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   z-index: 2;
   transition: all 300ms ease-in-out;
 } */
- #drawer ol li[completed] a {
+#drawer ol li[completed] a {
   color: #212121;
 }
 
 
 
- #drawer ol li[selectedItem] a, #drawer ol li a:focus {
+#drawer ol li[selectedItem] a,
+#drawer ol li a:focus {
   color: #1a73e8;
   font-weight: 600;
-  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
   background-color: #d4d4d4;
 }
 
-#drawer ol li a:active, #drawer ol li a:focus {
+#drawer ol li a:active,
+#drawer ol li a:focus {
   background: #c6c6c6;
   -webkit-tap-highlight-color: transparent;
   outline: 0;
@@ -223,9 +253,11 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   /* height:90vh; */
   flex-wrap: wrap;
 }
-.full-row{
+
+.full-row {
   width: 100%;
 }
+
 .google-codelab #main {
   display: flex;
   flex-direction: column;
@@ -233,6 +265,7 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   position: relative;
   /* background: #F8F9FA; */
 }
+
 .google-codelab #steps {
   overflow: hidden;
   flex-direction: column;
@@ -244,6 +277,7 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   line-height: 30px;
   display: block;
 }
+
 .google-codelab .google-codelab-step {
   display: none;
   width: 100%;
@@ -257,13 +291,16 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   overflow-y: auto;
   overflow-x: hidden;
 }
-.google-codelab .google-codelab-step[animating], .google-codelab .google-codelab-step[selectedtweet] {
+
+.google-codelab .google-codelab-step[animating],
+.google-codelab .google-codelab-step[selectedtweet] {
   display: block;
   transform-origin: 0 50% 0;
   animation-fill-mode: both;
 }
+
 .google-codelab:not([theme="minimal"]) .google-codelab-step .instructions {
-  box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3), 0px 2px 6px 2px rgba(60,64,67,0.15);
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15);
   background: #fff;
   /* max-width: 800px; */
   font-size: 14px;
@@ -277,16 +314,19 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   line-height: 30px;
   position: relative;
 }
+
 .google-codelab-step .instructions .inner {
   padding: 16px;
 }
+
 .google-codelab-step h2.step-title {
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 1.3em !important;
   font-weight: 400 !important;
   line-height: 1em !important;
   margin: 0 0 10px !important;
 }
+
 .google-codelab #controls {
   position: absolute;
   bottom: 32px;
@@ -298,6 +338,7 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   flex-direction: column;
   z-index: 1001;
 }
+
 .google-codelab #fabs {
   display: flex;
   flex-grow: 1;
@@ -305,9 +346,12 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   width: 100%;
   margin: 0 auto;
 }
-#previous-step, #next-step, #done {
+
+#previous-step,
+#next-step,
+#done {
   border-radius: 4px;
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .6px;
@@ -322,10 +366,11 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   color: #1A73E8;
   transform: scale(1, 1);
   transition: transform 300ms ease-in-out;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
+
 .google-codelab #fabs .spacer {
   flex-grow: 1;
 }
@@ -335,42 +380,46 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   color: #fff;
   background: #1A73E8;
 }
+
 #done {
   background: #1a73e8;
   color: #fff;
 }
 
 
-.my-chip{
+.my-chip {
   /* margin: 4px; */
-    color: rgba(0, 0, 0, 0.87);
-    height: 45px;
-    cursor: default;
-    border: none;
-    display: inline-flex;
-    outline: 0;
-    padding: 0;
-    font-size: 1rem;
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  height: 45px;
+  cursor: default;
+  border: none;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  font-size: 1rem;
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
-    align-items: center;
-    white-space: nowrap;
-     /* border-radius: 16px;  */
-    font-size: 19px;
-    justify-content: center;
-    text-decoration: none;
-    background-color: #e0e0e0;
-    box-sizing: border-box;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    position: relative;
-    margin-bottom: 16px;
+  align-items: center;
+  white-space: nowrap;
+  /* border-radius: 16px;  */
+  font-size: 19px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #e0e0e0;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  margin-bottom: 16px;
 }
-.my-chip:hover, .my-chip:focus {
+
+.my-chip:hover,
+.my-chip:focus {
   background-color: rgba(0, 0, 0, 0.04);
 }
+
 .outlined {
   /* border: 1px solid rgba(0, 0, 0, 0.23); */
   background-color: transparent;
@@ -401,11 +450,11 @@ body.en-lang .annotation-form.google-codelab > div:not(#main){ margin-left : 10p
   margin-left: -6px; */
 }
 
-body.en-lang .my-chip .index-circle{
+body.en-lang .my-chip .index-circle {
   left: 80%;
 }
 
-.my-chip  .chip-text {
+.my-chip .chip-text {
   cursor: inherit;
   display: flex;
   align-items: center;
@@ -418,84 +467,89 @@ body.en-lang .my-chip .index-circle{
 }
 
 .my-chip.selected-word {
-  color: #fff; 
+  color: #fff;
   /* background-color: #fff;  */
-   /* border-bottom: 1px solid #000;  */
+  /* border-bottom: 1px solid #000;  */
 }
 
 .my-chip.selected-word .index-circle {
-  color: #fff; 
-   /* background-color: rgb(17, 82, 147); */
+  color: #fff;
+  /* background-color: rgb(17, 82, 147); */
 }
 
 /* .my-chip.selected-word:hover, .my-chip.selected-word:focus {
   background-color: rgb(43, 128, 213);
 } */
 
-.keyboard-words{
-    position: absolute;
-    right: 3px;
-    top: 3px;
-    width: 50px;
-    border: 1px gray solid;
+.keyboard-words {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 50px;
+  border: 1px gray solid;
 }
 
-.subtexttitle{
+.subtexttitle {
   margin-top: 3px;
   color: rgba(0, 0, 0, 0.54);
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.46429em;
 }
+
 .sp-color-label {
   height: 20px;
   width: 20px;
   display: block;
   border-radius: 50%;
   text-align: center;
-    color: white;
-    padding: 2px;
+  color: white;
+  padding: 2px;
 }
 
-.sp-card-like{
-  box-shadow: 0px 1px 2px 0px rgba(60,64,67,0.3), 0px 2px 6px 2px rgba(60,64,67,0.15);
+.sp-card-like {
+  box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15);
   background: #fff;
   margin-right: 0 !important;
   padding: 14px;
   border-radius: 4px;
-  margin-top:10px ;
+  margin-top: 10px;
 }
-.
-.sp-card-like .title {
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+. .sp-card-like .title {
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 1.3em !important;
   font-weight: 400 !important;
   line-height: 1em !important;
   margin: 0 0 30px !important;
 }
+
 .sp-card-like .desc {
   color: rgba(0, 0, 0, 0.54);
   font-size: 0.875rem;
   font-weight: 400;
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.46429em;
 }
-.finish-span button{
-  width:100%
+
+.finish-span button {
+  width: 100%
 }
-.sp-align-content-sides{
+
+.sp-align-content-sides {
   display: flex;
   justify-content: space-between;
 }
 
-.sp-align-content-center{
+.sp-align-content-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.sp-stat-container{
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+.sp-stat-container {
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -504,70 +558,97 @@ body.en-lang .my-chip .index-circle{
   margin-left: 15px;
   margin-right: 15px;
 }
-a.sp-link{
+
+a.sp-link {
   text-decoration: none;
 }
-.sp-stat-value{
+
+.sp-stat-value {
   color: #1A73E8;
 }
-.sp-stat-title{
+
+.sp-stat-title {
   color: #80868B;
 }
 
-.sp-level-container{
+.sp-level-container {
   width: 140px;
 }
-.sp-level-container > div, #steps .instructions {
+
+.sp-level-container>div,
+#steps .instructions {
   height: 453px;
   margin-bottom: 0;
 }
 
-.sp-dimension-container{
+.sp-dimension-container {
   width: 160px;
 }
-.sp-dimension-container > div, #steps .instructions{
-  
+
+.sp-dimension-container>div,
+#steps .instructions {
+
   height: 453px;
   margin-bottom: 0;
 }
-.sp-choose-word-sentence-container a{
+
+.sp-choose-word-sentence-container a {
   margin-left: 5px;
   color: #1A73E8;
   text-decoration: none;
 }
+
 .sp-choose-word-sentence-container a:not(.active) {
   color: #212121;
 }
-.d-flex{
+
+.d-flex {
   display: flex;
 }
-.fontsize-90P{
+
+.fontsize-90P {
   font-size: 90%;
 }
-.align-items-center{
+
+.align-items-center {
   align-items: center;
 }
-.justify-content-between{
+
+.justify-content-between {
   justify-content: space-between;
 }
-.d-none{
+
+.d-none {
   display: none;
 }
-.position-relative {position: relative}
-.sp-green-color{color: #2c784f}
-.sp-blue-color{color: #1A73E8}
-.sp-red-color{color: rgb(245, 101, 101)}
+
+.position-relative {
+  position: relative
+}
+
+.sp-green-color {
+  color: #2c784f
+}
+
+.sp-blue-color {
+  color: #1A73E8
+}
+
+.sp-red-color {
+  color: rgb(245, 101, 101)
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
 
-.mx-5px{
+.mx-5px {
   margin-left: 5px;
   margin-right: 5px;
 }
 
 /* main btn style */
-.sp-pagedrawer-outer-btn-container{
+.sp-pagedrawer-outer-btn-container {
   color: #1A73E8;
   text-decoration: unset;
   font-weight: 600;
@@ -575,11 +656,12 @@ a.sp-link{
 }
 
 /* custom btn style - report page specific*/
-.sp-report-filter-outerbtn{
+.sp-report-filter-outerbtn {
   position: absolute;
   left: 20px;
 }
-body.en-lang .sp-report-filter-outerbtn{
+
+body.en-lang .sp-report-filter-outerbtn {
   left: unset;
   right: 20px;
 }
@@ -596,6 +678,7 @@ body.en-lang .sp-report-filter-outerbtn{
   -o-transition: width 0.3s ease-in, opacity 0.1s ease-in; */
   display: none;
 }
+
 .sp-pagedrawer-container.opened {
   /* opacity: 1; */
   width: 350px;
@@ -603,25 +686,29 @@ body.en-lang .sp-report-filter-outerbtn{
   border-right: 1.5px solid rgba(0, 0, 0, 0.12);
   margin-right: 10px;
 }
-body.en-lang .sp-pagedrawer-container.opened{
+
+body.en-lang .sp-pagedrawer-container.opened {
   border-right: none;
   border-left: 1.5px solid rgba(0, 0, 0, 0.12);
   margin-right: 0;
   margin-left: 10px;
 }
-.sp-pagedrawer-drawertitle-container{
+
+.sp-pagedrawer-drawertitle-container {
   border-bottom: 1.5px solid rgba(0, 0, 0, 0.12);
   padding: 8px;
 }
-.sp-pagedrawer-drawertitle-container .sp-pagedrawer-drawertitle{
+
+.sp-pagedrawer-drawertitle-container .sp-pagedrawer-drawertitle {
   font-size: 18px;
   font-weight: 400;
 }
-.sp-pagedrawer-drawercontent-container{
+
+.sp-pagedrawer-drawercontent-container {
   padding: 8px 15px;
 }
 
-.sp-reportfilter-time{
+.sp-reportfilter-time {
   margin-top: 12px;
 }
 
@@ -630,6 +717,7 @@ body.en-lang .sp-pagedrawer-container.opened{
   margin-bottom: 20px;
   padding: 1px;
 }
+
 .sp-seperator span {
   position: absolute;
   background: rgba(0, 0, 0, 0.12);
@@ -637,19 +725,22 @@ body.en-lang .sp-pagedrawer-container.opened{
   width: 100%;
   left: 0;
 }
-header > div{
-  padding-right:24px !important ;
-  padding-left:24px !important ;
+
+header>div {
+  padding-right: 24px !important;
+  padding-left: 24px !important;
 
 }
-header > div > button{
-  display: none  !important ;
+
+header>div>button {
+  display: none !important;
 }
 
 
-.dimensionitem{
+.dimensionitem {
   padding: 5px;
 }
+
 .dimensionitem[checkedItem]:hover {
   cursor: pointer;
   background-color: lightgray;
@@ -658,39 +749,57 @@ header > div > button{
 .dimensionitem[selectedItem] {
   color: #1a73e8;
   font-weight: 600;
-  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
   background-color: #d4d4d4;
 }
 
-.dimensionitem>span:first-child{
+.dimensionitem>span:first-child {
   width: 28px;
 }
-.dimensionLabel{
+
+.dimensionLabel {
   color: rgba(0, 0, 0, 0.87);
   font-size: 0.7rem;
   font-weight: 400;
-  font-family: Almarai,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family: Almarai, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   line-height: 1.46429em;
-  -webkit-user-select: none; /* Safari */        
--moz-user-select: none; /* Firefox */
--ms-user-select: none; /* IE10+/Edge */
-user-select: none; /* Standard */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
 }
 
-.arabic-tweet{
+.arabic-tweet {
   direction: rtl;
   font-size: 14px !important;
   text-align: right;
   font-family: 'Almarai', sans-serifv !important
 }
 
-.twemoji{
+.twemoji {
   display: inline-block;
   vertical-align: middle;
   width: 16px;
   margin: 0 2px;
-} 
+}
 
-.tweet-tooltip{
+.tweet-tooltip {
   color: white !important;
+}
+
+.top-space {
+  margin-top: 15px;
+}
+
+.colored-label {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 3px 6px;
+  border-left-width: 2px;
+  border-left-style: solid;
+  font-family: 'Almarai', sans-serifv !important
 }

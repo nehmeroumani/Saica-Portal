@@ -11,7 +11,7 @@ const UserFilter = props => (
 
 const UserList = ({ translate, ...props }) => (
     <List {...props} filters={<UserFilter />}>
-        <Datagrid  rowClick="show">
+        <Datagrid rowClick="show">
         <TextField source="id" label='#' />  
         <TextField source="assignedInTasks" label='Assigned To' />  
         {/* <TextField source="accountDisplayName" label='user' /> */}
