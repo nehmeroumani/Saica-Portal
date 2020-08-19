@@ -1,8 +1,9 @@
 import React from 'react';
-import { AppBar, UserMenu, MenuItemLink, translate } from 'react-admin';
+import { AppBar, UserMenu, MenuItemLink, withTranslate } from 'react-admin';
 import Typography from '@material-ui/core/Typography';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { withStyles } from '@material-ui/core/styles';
+import ResetMenuItem from './ResetMenuItem';
 
 import Logo from './Logo';
 
@@ -18,19 +19,22 @@ const styles = {
     },
 };
 
-const CustomUserMenu = translate(({ translate, ...props }) => (
-    <UserMenu {...props}>
+const CustomUserMenu = (props) => {
+    const {translate} = props;
+    return <UserMenu {...props}>
         <MenuItemLink
             to="/configuration"
             primaryText={translate('resources.general.configuration')}
             leftIcon={<SettingsIcon />}
         />
+        <ResetMenuItem {...props} />
     </UserMenu>
-));
+};
 
-const CustomAppBar = translate(({translate, classes, ...props }) => (
-    <AppBar  {...props} 
-        userMenu={<CustomUserMenu />}>
+const CustomAppBar = (props) => {
+    const {translate, classes } = props;
+    return <AppBar {...props} 
+        userMenu={<CustomUserMenu {...props} />}>
         <Typography
             variant="title"
             color="inherit"
@@ -43,7 +47,7 @@ const CustomAppBar = translate(({translate, classes, ...props }) => (
         
         <Logo />
         <span className={classes.spacer} />
-    </AppBar>
-));
+    </AppBar>;
+};
 
-export default withStyles(styles)(CustomAppBar);
+export default withStyles(styles)(withTranslate(CustomAppBar));

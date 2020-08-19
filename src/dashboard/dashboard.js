@@ -85,7 +85,7 @@ const Twitter = ({ value, translate }) => (
                 <Typography variant="headline" component="h2">
                     {value}
                 </Typography>
-            </Card>  </Link >
+            </Card></Link>
     </div>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Layout, Sidebar,WithPermissions } from 'react-admin';
+import { Layout, Sidebar, WithPermissions } from 'react-admin';
 import AppBar from './AppBar';
 import Menu from './Menu';
 import { ArabiclightTheme, englishLightTheme } from './themes';
@@ -15,21 +15,21 @@ const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 const generateClassName = createGenerateClassName();
 
 const CustomSidebar = props =>
-<WithPermissions
-render={({ permissions }) => (
-    permissions === 'admin'
-        ?
-<Sidebar {...props} size={10} />:
-<Sidebar {...props} size={10} />)}
-  />
+    <WithPermissions
+        render={({ permissions }) => (
+            permissions === 'admin'
+                ?
+                <Sidebar {...props} size={10} /> :
+                <Sidebar {...props} size={10} />)}
+    />
 const CustomLayout = props => (
-<JssProvider jss={jss} generateClassName={generateClassName}>
-        <Layout {...props} appBar={AppBar} sidebar={CustomSidebar} menu={Menu}  />
-        </JssProvider>)
+    <JssProvider jss={jss} generateClassName={generateClassName}>
+        <Layout {...props} appBar={AppBar} sidebar={CustomSidebar} menu={Menu} />
+    </JssProvider>)
 
 export default connect(
     state => ({
-        theme:localStorage.getItem('lang') ==='en' ? englishLightTheme  :ArabiclightTheme ,
+        theme: localStorage.getItem('lang') === 'en' ? englishLightTheme : ArabiclightTheme,
     }),
     {}
 )(CustomLayout);
